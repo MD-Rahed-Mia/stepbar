@@ -1,0 +1,73 @@
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.steps {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.steps .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: gray;
+  background: #fff;
+}
+
+.button_container {
+  margin-top: 5rem;
+}
+
+.button_container button {
+  padding: 10px;
+  background: seagreen;
+  color: white;
+  font-size: 1.2rem;
+  min-width: 120px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.button_container button:disabled {
+  cursor: none;
+  opacity: 0.5;
+}
+
+.progress_container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 5px;
+  background: gray;
+  z-index: -1;
+}
+
+.progress_indicator {
+  width: 0%;
+  height: 100%;
+  background: orangered;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.steps .circle.active {
+  border-color: orangered;
+}
